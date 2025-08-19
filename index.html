@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>Maison des Arômes</title>
+  <meta name="description" content="Protótipo jogável 3D WebGL — Jardin de Grasse, coleta de notas e pirâmide olfativa.">
+  <meta name="theme-color" content="#6c63ff">
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+  <link rel="icon" href="./assets/icons/favicon.ico" sizes="any">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Maison des Arômes">
+  <link rel="stylesheet" href="./styles/style.css"/>
+  <noscript>Este jogo requer JavaScript ativado.</noscript>
+  <style>html,body{background:#0b0b10}</style>
+</head>
+<body>
+  <div id="overlay">
+    <div class="logo">Maison des Arômes</div>
+    <p class="subtitle">Você é aprendiz de perfumista em uma grande maison, nos jardins de Grasse.</p>
+    <button id="startBtn">Entrar no Jardim</button>
+    <p class="tiny">Desktop: WASD para mover, mouse para olhar, E interagir. Mobile: joystick esquerdo para mover, arraste à direita para olhar, toque no botão para interagir.</p>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div id="clock">06:00</div>
+    <div id="mission"></div>
+    <div id="inventory"></div>
+    <div id="interactHint" class="hint hidden">Toque / E para interagir</div>
+  </div>
+
+  <!-- Mobile controls -->
+  <div id="mobileControls" class="hidden">
+    <div id="joystickBase"><div id="joystickStick"></div></div>
+    <button id="actionBtn">Interagir</button>
+  </div>
+
+  <!-- Stylized hands overlay -->
+  <div id="hands" class="hidden">
+    <div class="hand left">🖐️</div>
+    <div class="hand right">🖐️</div>
+  </div>
+
+  <!-- Bottle viewer -->
+  <canvas id="bottleCanvas" aria-label="Visualizador do frasco fav 105"></canvas>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
